@@ -1,0 +1,16 @@
+https://pleclair.ua.edu/ph105/Slides/Sum16/L23_waves_2D-3D.pdf
+
+givens: luminosity, L Watts & distance, r metres
+to find: amplitude - the peak electric field strength, A = E
+
+intensity I ∝ A^2  -->  I ∝ E^2  -->  I = kE^2
+
+I = L/(4πr^2) Watts per metre squared
+
+kE^2 = L/(4πr^2)
+E = sqrt( L/(4kπr^2) )
+
+k = ε0c/2 where ε0 is the permittivity of free space and c is the speed of light
+
+E = sqrt( L/(2πε0c*r^2) )
+E = sqrt(L/2πε0c) / r

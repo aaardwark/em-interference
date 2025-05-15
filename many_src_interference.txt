@@ -1,0 +1,17 @@
+interference due to several point sources of radiation
+here will assume that all sources emit the same single frequency
+and that the radiation is uniform
+
+$def point_src := position [x, y, z]; frequency; phase; luminosity;
+    @def distance_t0 := point;
+        >>> ...
+        
+    @def amplitude_at := point;
+        >>> sqrt(luminosity) / distance_to(point)*sqrt(2πε0c)
+
+    @def oscillation := point;
+        >>> sinusoid(frequency, amplitude_at(point), phase)
+
+$def sinusoid := frequency, amplitude, phase
+    @def displacement := t;
+        >>> amplitude * sin(2*pi*frequency*t - phase) 
