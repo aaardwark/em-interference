@@ -1,3 +1,5 @@
+https://sites.ualberta.ca/~pogosyan/teaching/PHYS_130/FALL_2010/lectures/lect32/lecture32.html
+
 interference due to several point sources of radiation
 here will assume that all sources emit the same single frequency
 and that the radiation is uniform
@@ -14,4 +16,9 @@ $def point_src := position [x, y, z]; frequency; phase; luminosity;
 
 $def sinusoid := frequency, amplitude, phase
     @def displacement := t;
-        >>> amplitude * sin(2*pi*frequency*t - phase) 
+        >>> amplitude * sin(2*pi*frequency*t + phase) 
+
+
+@def combine_sinusoids := s1; ...; sn;
+    if si.frequency is not constant
+        >>> FAIL

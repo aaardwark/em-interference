@@ -1,4 +1,5 @@
 https://pleclair.ua.edu/ph105/Slides/Sum16/L23_waves_2D-3D.pdf
+https://sites.ualberta.ca/~pogosyan/teaching/PHYS_130/FALL_2010/lectures/lect32/lecture32.html
 
 givens: luminosity, L Watts & distance, r metres
 to find: amplitude - the peak electric field strength, A = E

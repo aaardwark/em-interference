@@ -59,12 +59,9 @@ def capture_pattern(coords1, coords2, wavelength, phase_diff, luminosity_ratio, 
         'z':[ztop-(n*spacing) for n in range(heightpix)]
         }
 
-    ampl_array = []
-    for z in frame['z']:
-        row = []
-        for x in frame['x']:
-            row.append( amplitude_at(x, y, z) )
-        ampl_array.append(row)
+    ampl_array = [
+        [amplitude_at(x, y, z) for x in frame['x']] for z in frame['z']
+    ]
     max_ampl = max(max(row) for row in ampl_array)
 
     max_pixel = 2**(abs(int(bitdepth))) - 1
@@ -76,12 +73,3 @@ def capture_pattern(coords1, coords2, wavelength, phase_diff, luminosity_ratio, 
 
 
 frame_specs = {'xleft':-0.2, 'xright':0.2, 'y':1, 'ztop':0.2, 'zbottom':-0.2, 'spacing':0.0002}
-
-frame_specs['y'] = 0.1
-capture_pattern((-0.1,0,0), (0.1,0,0), 587*10**-9, 0, 1, frame_specs, 8, 'sf01')
-
-frame_specs['y'] = 0.05
-capture_pattern((-0.1,0,0), (0.1,0,0), 587*10**-9, 0, 1, frame_specs, 8, 'sf005')
-
-frame_specs['y'] = 0.01
-capture_pattern((-0.1,0,0), (0.1,0,0), 587*10**-9, 0, 1, frame_specs, 8, 'sf001')
