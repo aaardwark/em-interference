@@ -118,6 +118,6 @@ class InterferenceSetup:
 
 if __name__ == '__main__':
     doubleslitgreen = InterferenceSetup(587*10**-9)
-    doubleslitgreen.add_src('A', (-0.01,0,0), 0, 1)
-    doubleslitgreen.add_src('B', (0.01,0,0), pi, 1)
-    doubleslitgreen.capture_frame((-0.5,1,0.5),(0.5,1,-0.5), (1,0,0), 0.001, 'eqn_verif', 8)
+    doubleslitgreen.add_src('A', (-0.001,0,0), 0, 1)
+    doubleslitgreen.add_src('B', (0.001,0,0), pi, 1)
+    doubleslitgreen.capture_frame((-0.005,5,0.002),(0.005,5,-0.002), (1,0,0), 0.00001, 'eqn_verif3', 8)
